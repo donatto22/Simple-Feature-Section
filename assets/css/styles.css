@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --background-color: #121826;
+    --card-background-color: #212936;
+    --paragraph-color: #9DA3AE;
+    --title-color: #E5E7EB;
+    --bubble-color1: #FCEED8;
+    --bubble-color2: #DEE9FC;
+    --bubble-color3: #FBE5E6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    background-image: url('../images/Background_image.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 3em;
+    padding: 3em 0;
+}
+
+header {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+header h1 {
+    font-size: 40px !important;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
+article {
+    width: 330px;
+    background-color: var(--card-background-color);
+    border-radius: 20px;
+    padding: 2em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+    transition: background-color .2s linear;
+}
+
+article:hover {
+    background-color: hsl(217, 24%, 22%);
+}
+
+.title {
+    color: var(--title-color);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.paragraph {
+    color: var(--paragraph-color);
+    font-size: 16px;
+}
+
+article img {
+    border-radius: 10px;
+}
+
+.emoji {
+    width: fit-content;
+    padding: .8em;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+article:nth-child(1) .emoji {
+    background-color: var(--bubble-color1);
+}
+
+article:nth-child(2) .emoji {
+    background-color: var(--bubble-color2);
+}
+
+article:nth-child(3) .emoji {
+    background-color: var(--bubble-color3);
+}
